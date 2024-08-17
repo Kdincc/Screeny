@@ -26,5 +26,10 @@ namespace Screeny.Domain.Screenshots
         public string Title { get; private set; } 
 
         public Size Size { get; private set; }
+
+        public void ChangeTitle(string newTitle)
+        {
+            Title = newTitle;
+        }
     }
 }
