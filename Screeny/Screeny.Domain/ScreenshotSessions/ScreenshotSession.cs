@@ -10,14 +10,14 @@ namespace Screeny.Domain.ScreenshotStacks
 {
     public sealed class ScreenshotSession
     {
-        private readonly List<Screenshot> _screenshots = new();
+        private readonly List<Screenshot> _screenshots = [];
 
         public ScreenshotSession(string name)
         {
             Name = name;
         }
 
-        public string Name { get; }
+        public string Name { get; private set; }
 
         public void Add(Screenshot screenshot)
         {
@@ -32,6 +32,11 @@ namespace Screeny.Domain.ScreenshotStacks
         public void SaveAll(ISavingStrategy savingStrategy, string path)
         {
             _screenshots.ForEach(screenshot => savingStrategy.Save(screenshot, path));
+        }
+
+        public void ChangeName(string newName)
+        {
+            Name = newName;
         }
     }
 }
