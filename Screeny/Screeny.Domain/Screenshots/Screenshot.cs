@@ -7,14 +7,24 @@ using System.Threading.Tasks;
 
 namespace Screeny.Domain.Screenshots
 {
-    public sealed class Screenshot(string title, byte[] image, Size size, ScreenshotFormat format)
+    public sealed class Screenshot
     {
-        public ScreenshotFormat Format { get; private set; } = format;
+        private readonly byte[] _image;
 
-        public byte[] Image { get; private set; } = image;
+        public Screenshot(string title, byte[] image, Size size, ScreenshotFormat format)
+        {
+            Title = title;
+            _image = image;
+            Size = size;
+            Format = format;
+        }
 
-        public string Title { get; private set; } = title;
+        public IReadOnlyCollection<byte> Image => _image;
 
-        public Size Size { get; private set; } = size;
+        public ScreenshotFormat Format { get; private set; }
+
+        public string Title { get; private set; } 
+
+        public Size Size { get; private set; }
     }
 }
