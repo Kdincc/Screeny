@@ -20,8 +20,6 @@ namespace Screeny.Domain.Common
 
         public static ScreenshotPath Create(string path)
         {
-            char[] invalidChars = Path.GetInvalidPathChars();
-
             ThrowIfContainsInvalidChars(path);
             ThrowIfIsNullOrWhitespace(path);
             ThrowIfPathIsTooLong(path);
@@ -64,6 +62,8 @@ namespace Screeny.Domain.Common
             }
         }
 
+        public static implicit operator string(ScreenshotPath path) => path.Value;
 
+        public static implicit operator ScreenshotPath(string path) => Create(path);
     }
 }
