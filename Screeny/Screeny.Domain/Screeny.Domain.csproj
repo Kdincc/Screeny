@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Common\" />
+    <Folder Include="Screenshot\" />
   </ItemGroup>
 
 </Project>
