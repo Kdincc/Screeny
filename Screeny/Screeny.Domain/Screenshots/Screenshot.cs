@@ -33,6 +33,11 @@ namespace Screeny.Domain.Screenshots
             Title = newTitle;
         }
 
+        public void ChangeFormat(ScreenshotFormat newFormat)
+        {
+            Format = newFormat;
+        }
+
         public void Save(ISavingStrategy savingStrategy, ScreenshotPath path)
         {
             savingStrategy.Save(this, path);
