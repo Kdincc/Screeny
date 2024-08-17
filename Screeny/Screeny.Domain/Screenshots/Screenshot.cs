@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Screeny.Domain.Common;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -30,6 +31,11 @@ namespace Screeny.Domain.Screenshots
         public void ChangeTitle(string newTitle)
         {
             Title = newTitle;
+        }
+
+        public void Save(ISavingStrategy savingStrategy, string path)
+        {
+            savingStrategy.Save(this, path);
         }
     }
 }
