@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screeny", "Screeny\Screeny.csproj", "{44B86FD6-EE6C-469A-B700-B8AC4F53DE5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screeny.Domain", "Screeny.Domain\Screeny.Domain.csproj", "{C2569339-91DB-4045-A56A-EDC972FC760D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{44B86FD6-EE6C-469A-B700-B8AC4F53DE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44B86FD6-EE6C-469A-B700-B8AC4F53DE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44B86FD6-EE6C-469A-B700-B8AC4F53DE5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2569339-91DB-4045-A56A-EDC972FC760D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2569339-91DB-4045-A56A-EDC972FC760D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2569339-91DB-4045-A56A-EDC972FC760D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2569339-91DB-4045-A56A-EDC972FC760D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
