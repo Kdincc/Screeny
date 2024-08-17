@@ -16,7 +16,7 @@ namespace Screeny.Domain.Common
             _path = path;
         }
 
-        public string Value { get; }
+        public string Value => _path;
 
         public static ScreenshotPath Create(string path)
         {
@@ -63,5 +63,7 @@ namespace Screeny.Domain.Common
                 throw new ArgumentException("The path format is invalid", nameof(path));
             }
         }
+
+
     }
 }
