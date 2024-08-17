@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Screeny.Domain.Screenshot;
+using Screeny.Domain.Screenshots;
 
 namespace Screeny.Domain.Common
 {
