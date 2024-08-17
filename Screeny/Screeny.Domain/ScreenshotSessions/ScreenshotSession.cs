@@ -31,7 +31,7 @@ namespace Screeny.Domain.ScreenshotStacks
 
         public void SaveAll(ISavingStrategy savingStrategy, string path)
         {
-            _screenshots.ForEach(screenshot => savingStrategy.Save(screenshot, path));
+            _screenshots.ForEach(screenshot => screenshot.Save(savingStrategy, path));
         }
 
         public void ChangeName(string newName)
