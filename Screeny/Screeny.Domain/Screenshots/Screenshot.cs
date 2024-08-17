@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Screeny.Domain.Screenshot
+namespace Screeny.Domain.Screenshots
 {
     public sealed class Screenshot(string title, byte[] image, Size size, ScreenshotFormat format)
     {

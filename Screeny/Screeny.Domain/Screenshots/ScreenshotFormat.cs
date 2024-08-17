@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Screeny.Domain.Screenshot
+namespace Screeny.Domain.Screenshots
 {
     public enum ScreenshotFormat
     {
