@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screeny", "Screeny\Screeny.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screeny.Domain", "Screeny.Domain\Screeny.Domain.csproj", "{C2569339-91DB-4045-A56A-EDC972FC760D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screeny.Application", "Screeny.Application\Screeny.Application.csproj", "{E341EABA-6C02-44B0-8B3E-69ED8AAA2D9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C2569339-91DB-4045-A56A-EDC972FC760D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2569339-91DB-4045-A56A-EDC972FC760D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2569339-91DB-4045-A56A-EDC972FC760D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E341EABA-6C02-44B0-8B3E-69ED8AAA2D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E341EABA-6C02-44B0-8B3E-69ED8AAA2D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E341EABA-6C02-44B0-8B3E-69ED8AAA2D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E341EABA-6C02-44B0-8B3E-69ED8AAA2D9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
