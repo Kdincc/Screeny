@@ -4,8 +4,8 @@ namespace Screeny.Domain.Screenshot
 {
     public enum ScreenshotFormat
     {
-        PNG,
-        JPEG,
-        BMP,
+        Png,
+        Jpeg,
+        Tiff,
     }
 }
