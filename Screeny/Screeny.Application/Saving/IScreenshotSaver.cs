@@ -10,6 +10,6 @@ namespace Screeny.Application.Saving
 {
     public interface IScreenshotSaver
     {
-        public void Save(Screenshot screenshot, ScreenshotPath path);
+        public SavingResult Save(Screenshot screenshot, ScreenshotPath path);
     }
 }

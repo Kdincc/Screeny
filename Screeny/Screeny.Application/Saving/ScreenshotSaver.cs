@@ -23,12 +23,16 @@ namespace Screeny.Application.Saving
             };
         }
 
-        public void Save(Screenshot screenshot, ScreenshotPath path)
+        public SavingResult Save(Screenshot screenshot, ScreenshotPath path)
         {
             if (_savingStrategies.TryGetValue(screenshot.Format, out ISavingStrategy savingStrategy))
             {
                 savingStrategy.Save(screenshot, path);
+
+                return SavingResult.Success;    
             }
+
+            return new SavingResult(false, "Unsupported format");
         }
     }
 }

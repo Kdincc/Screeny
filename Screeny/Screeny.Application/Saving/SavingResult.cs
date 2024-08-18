@@ -8,12 +8,14 @@ namespace Screeny.Application.Saving
 {
     public sealed class SavingResult
     {
-        public bool Success { get; }
+        public static SavingResult Success => new(true, string.Empty);
         public string Message { get; }
 
-        public SavingResult(bool success, string message = "Success")
+        public bool IsSuccess { get; }
+
+        public SavingResult(bool isSuccess, string message)
         {
-            Success = success;
+            IsSuccess = isSuccess;
             Message = message;
         }
     }
