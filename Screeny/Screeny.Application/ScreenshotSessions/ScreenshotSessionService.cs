@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using Screeny.Application.Saving;
 using Screeny.Domain.Common;
+using Screeny.Domain.Screenshots;
 using Screeny.Domain.ScreenshotStacks;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace Screeny.Application.ScreenshotSessions
 
         public void CreateSession(string name)
         {
-            _sessions.Add(new ScreenshotSession(name));
+            _sessions.Add(new ScreenshotSession(name, ScreenshotFormat.Png));
         }
 
         public void RemoveSession(ScreenshotSession session)
@@ -34,6 +35,14 @@ namespace Screeny.Application.ScreenshotSessions
 
         public void SaveSession(ScreenshotSession session, Path path)
         {
+            _saver.Save(session, path);
+        }
+
+        public void AddScreenshotToSession(ScreenshotSession session, Screenshot screenshot)
+        {
+            screenshot.ChangeTitle($"{session.Name} - {_sessions.Count}");
+
+            session.Add(screenshot);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using Screeny.Domain.ScreenshotStacks;
+﻿using Screeny.Domain.Common;
+using Screeny.Domain.Screenshots;
+using Screeny.Domain.ScreenshotStacks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +14,9 @@ namespace Screeny.Application.ScreenshotSessions
         public void CreateSession(string name);
 
         public void RemoveSession(ScreenshotSession session);
+
+        public void SaveSession(ScreenshotSession session, Path path);
+
+        public void AddScreenshotToSession(ScreenshotSession session, Screenshot screenshot);
     }
 }
