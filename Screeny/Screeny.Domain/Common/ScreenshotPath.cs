@@ -28,7 +28,7 @@ namespace Screeny.Domain.Common
             return new ScreenshotPath(path);
         }
 
-        public static void ThrowIfIsNullOrWhitespace(string path)
+        private static void ThrowIfIsNullOrWhitespace(string path)
         {
             if (string.IsNullOrWhiteSpace(path))
             {
@@ -36,7 +36,7 @@ namespace Screeny.Domain.Common
             }
         }
 
-        public static void ThrowIfContainsInvalidChars(string path)
+        private static void ThrowIfContainsInvalidChars(string path)
         {
             char[] invalidChars = Path.GetInvalidPathChars();
 
@@ -46,7 +46,7 @@ namespace Screeny.Domain.Common
             }
         }
 
-        public static void ThrowIfPathIsTooLong(string path)
+        private static void ThrowIfPathIsTooLong(string path)
         {
             if (path.Length > 260)
             {
@@ -54,7 +54,7 @@ namespace Screeny.Domain.Common
             }
         }
 
-        public static void ThrowIfPathIsNotRooted(string path)
+        private static void ThrowIfPathIsNotRooted(string path)
         {
             if (!Path.IsPathRooted(path))
             {
