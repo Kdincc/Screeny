@@ -36,11 +36,19 @@ namespace Screeny.Application.ScreenshotSessions
         public void SaveSession(ScreenshotSession session, Path path)
         {
             _saver.Save(session, path);
+
+            if (_options.AllowAutoDeletion)
+            {
+                RemoveSession(session);
+            }
         }
 
         public void AddScreenshotToSession(ScreenshotSession session, Screenshot screenshot)
         {
-            screenshot.ChangeTitle($"{session.Name} - {_sessions.Count}");
+            if(_options.AllowAutoNaming)
+            {
+                screenshot.ChangeTitle($"{session.Name} - {_sessions.Count}");
+            }
 
             session.Add(screenshot);
         }
