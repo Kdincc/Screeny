@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Screeny.Application.SavingStrategies
+namespace Screeny.Application.Saving.SavingStrategies
 {
     public sealed class PngSavingStrategy : ISavingStrategy
     {
