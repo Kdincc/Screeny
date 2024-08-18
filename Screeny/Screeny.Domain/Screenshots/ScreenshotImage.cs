@@ -14,7 +14,7 @@ namespace Screeny.Domain.Screenshots
             ImageData = image;
         }
 
-        public byte[] ImageData { get; private set; }
+        public IReadOnlyCollection<byte> ImageData { get; private set; }
 
         public static ScreenshotImage FromBytes(byte[] bytes)
         {
@@ -61,6 +61,7 @@ namespace Screeny.Domain.Screenshots
             return false;
 
         }
+
         private static bool IsTiff(byte[] bytes)
         {
             if (bytes.Length < ImageSignatures.Tiff.Length)

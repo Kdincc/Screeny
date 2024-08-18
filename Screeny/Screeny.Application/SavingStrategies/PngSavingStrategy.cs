@@ -15,7 +15,7 @@ namespace Screeny.Application.SavingStrategies
     {
         public void Save(Screenshot screenshot, ScreenshotPath path)
         {
-            using MemoryStream memoryStream = new([.. screenshot.Image]);
+            using MemoryStream memoryStream = new([.. screenshot.Image.ImageData]);
             using Image image = Image.FromStream(memoryStream);
 
             image.Save(path, ImageFormat.Png);

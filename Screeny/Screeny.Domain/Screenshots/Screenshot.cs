@@ -10,9 +10,9 @@ namespace Screeny.Domain.Screenshots
 {
     public sealed class Screenshot
     {
-        private readonly byte[] _image;
+        private readonly ScreenshotImage _image;
 
-        public Screenshot(string title, byte[] image, Size size, ScreenshotFormat format)
+        public Screenshot(string title, ScreenshotImage image, Size size, ScreenshotFormat format)
         {
             Title = title;
             _image = image;
@@ -20,7 +20,7 @@ namespace Screeny.Domain.Screenshots
             Format = format;
         }
 
-        public IReadOnlyCollection<byte> Image => _image;
+        public ScreenshotImage Image => _image;
 
         public ScreenshotFormat Format { get; private set; }
 
