@@ -1,10 +1,5 @@
 ﻿using Screeny.Domain.Common;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Screeny.Domain.Screenshots
 {
@@ -24,7 +19,7 @@ namespace Screeny.Domain.Screenshots
 
         public ScreenshotFormat Format { get; private set; }
 
-        public string Title { get; private set; } 
+        public string Title { get; private set; }
 
         public Size Size { get; private set; }
 
