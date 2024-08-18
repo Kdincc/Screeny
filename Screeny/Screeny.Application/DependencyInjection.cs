@@ -3,7 +3,7 @@ using Screeny.Application.Saving;
 
 namespace Screeny.Application
 {
-    public static class DependencyInjectio
+    public static class DependencyInjection
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
