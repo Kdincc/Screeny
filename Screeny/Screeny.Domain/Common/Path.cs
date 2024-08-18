@@ -2,25 +2,25 @@
 
 namespace Screeny.Domain.Common
 {
-    public readonly struct ScreenshotPath
+    public readonly struct Path
     {
         private readonly string _path;
 
-        private ScreenshotPath(string path)
+        private Path(string path)
         {
             _path = path;
         }
 
         public string Value => _path;
 
-        public static ScreenshotPath Create(string path)
+        public static Path Create(string path)
         {
             ThrowIfContainsInvalidChars(path);
             ThrowIfIsNullOrWhitespace(path);
             ThrowIfPathIsTooLong(path);
             ThrowIfPathIsNotRooted(path);
 
-            return new ScreenshotPath(path);
+            return new Path(path);
         }
 
         private static void ThrowIfIsNullOrWhitespace(string path)
@@ -33,7 +33,7 @@ namespace Screeny.Domain.Common
 
         private static void ThrowIfContainsInvalidChars(string path)
         {
-            char[] invalidChars = Path.GetInvalidPathChars();
+            char[] invalidChars = System.IO.Path.GetInvalidPathChars();
 
             if (path.Any(c => invalidChars.Contains(c)))
             {
@@ -51,14 +51,14 @@ namespace Screeny.Domain.Common
 
         private static void ThrowIfPathIsNotRooted(string path)
         {
-            if (!Path.IsPathRooted(path))
+            if (!System.IO.Path.IsPathRooted(path))
             {
                 throw new ArgumentException("The path format is invalid", nameof(path));
             }
         }
 
-        public static implicit operator string(ScreenshotPath path) => path.Value;
+        public static implicit operator string(Path path) => path.Value;
 
-        public static implicit operator ScreenshotPath(string path) => Create(path);
+        public static implicit operator Path(string path) => Create(path);
     }
 }

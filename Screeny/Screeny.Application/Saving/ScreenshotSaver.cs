@@ -1,6 +1,7 @@
 ﻿using Screeny.Application.Saving.SavingStrategies;
 using Screeny.Domain.Common;
 using Screeny.Domain.Screenshots;
+using Screeny.Domain.ScreenshotStacks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,13 +24,25 @@ namespace Screeny.Application.Saving
             };
         }
 
-        public SavingResult Save(Screenshot screenshot, ScreenshotPath path)
+        public SavingResult Save(Screenshot screenshot, Path path)
         {
             if (_savingStrategies.TryGetValue(screenshot.Format, out ISavingStrategy savingStrategy))
             {
                 savingStrategy.Save(screenshot, path);
 
                 return SavingResult.Success;    
+            }
+
+            return new SavingResult(false, "Unsupported format");
+        }
+
+        public SavingResult Save(ScreenshotSession screenshotStack, Path path)
+        {
+            if(_savingStrategies.TryGetValue(screenshotStack.ScreenshotsFormat, out ISavingStrategy savingStrategy))
+            {
+                screenshotStack.SaveAll(savingStrategy, path);
+
+                return SavingResult.Success;
             }
 
             return new SavingResult(false, "Unsupported format");

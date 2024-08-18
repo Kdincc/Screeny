@@ -1,4 +1,4 @@
-﻿namespace Screeny.Domain.Screenshots
+﻿namespace Screeny.Domain.Common
 {
     public enum ScreenshotFormat
     {
