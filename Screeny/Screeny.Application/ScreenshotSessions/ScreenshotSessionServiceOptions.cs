@@ -9,8 +9,8 @@ namespace Screeny.Application.ScreenshotSessions
 {
     public sealed class ScreenshotSessionServiceOptions
     {
-        public bool AllowAutoNaming { get; set; };
+        public bool AllowAutoNaming { get; set; }
 
-        public bool AllowAutoDeletion { get; set; };
+        public bool AllowAutoDeletion { get; set; }
     }
 }

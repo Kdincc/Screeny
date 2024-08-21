@@ -15,6 +15,7 @@ namespace Screeny
 
         public App()
         {
+
             var hostBuilder = new HostBuilder()
                 .ConfigureServices((hostContext, services) =>
                 {
