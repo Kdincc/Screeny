@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Screeny.Application;
 using System.Configuration;
 using System.Data;
@@ -15,15 +16,13 @@ namespace Screeny
 
         public App()
         {
-
             var hostBuilder = new HostBuilder()
                 .ConfigureServices((hostContext, services) =>
                 {
                     services
                     .AddApplication()
-                    .AddScreeny();
+                    .AddScreeny(Resources);
                 });
-
             _host = hostBuilder.Build();
         }
 
