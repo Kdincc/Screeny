@@ -9,6 +9,8 @@
         Title="MainWindow" Height="450" Width="800"
         WindowStartupLocation="CenterScreen">
     <Grid>
+        <blazor:BlazorWebView HostPage="wwwroot/index.html" Services="{DynamicResource services}">
 
+        </blazor:BlazorWebView>
     </Grid>
 </Window>
