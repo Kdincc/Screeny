@@ -9,9 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Screeny.Application.Saving.SavingStrategies
+namespace Screeny.Application.Saving.Savings
 {
-    public sealed class JpegSavingStrategy : ISavingStrategy
+    public sealed class JpegSaving : ISavingStrategy
     {
         public void Save(Screenshot screenshot, ImagePath path)
         {
