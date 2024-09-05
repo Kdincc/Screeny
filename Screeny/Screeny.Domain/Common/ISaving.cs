@@ -2,7 +2,7 @@
 
 namespace Screeny.Domain.Common
 {
-    public interface ISavingStrategy
+    public interface ISaving
     {
         public void Save(Screenshot screenshot, ImagePath path);
     }

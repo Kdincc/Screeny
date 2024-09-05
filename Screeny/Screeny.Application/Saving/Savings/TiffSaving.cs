@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Screeny.Application.Saving.Savings
 {
-    public sealed class TiffSaving : ISavingStrategy
+    public sealed class TiffSaving : ISaving
     {
         public void Save(Screenshot screenshot, ImagePath path)
         {

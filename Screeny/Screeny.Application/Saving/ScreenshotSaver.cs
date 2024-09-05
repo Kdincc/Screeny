@@ -12,7 +12,7 @@ namespace Screeny.Application.Saving
 {
     public sealed class ScreenshotSaver : IScreenshotSaver
     {
-        private readonly Dictionary<ScreenshotFormat, ISavingStrategy> _savingStrategies;
+        private readonly Dictionary<ScreenshotFormat, ISaving> _savingStrategies;
 
         public ScreenshotSaver()
         {
@@ -26,7 +26,7 @@ namespace Screeny.Application.Saving
 
         public SavingResult Save(Screenshot screenshot, ImagePath path)
         {
-            if (_savingStrategies.TryGetValue(screenshot.Format, out ISavingStrategy savingStrategy))
+            if (_savingStrategies.TryGetValue(screenshot.Format, out ISaving savingStrategy))
             {
                 savingStrategy.Save(screenshot, path);
 
@@ -38,7 +38,7 @@ namespace Screeny.Application.Saving
 
         public SavingResult Save(ScreenshotSession screenshotStack, ImagePath path)
         {
-            if(_savingStrategies.TryGetValue(screenshotStack.ScreenshotsFormat, out ISavingStrategy savingStrategy))
+            if(_savingStrategies.TryGetValue(screenshotStack.ScreenshotsFormat, out ISaving savingStrategy))
             {
                 screenshotStack.SaveAll(savingStrategy, path);
 

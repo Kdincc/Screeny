@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Screeny.Application.Saving.Savings
 {
-    public sealed class JpegSaving : ISavingStrategy
+    public sealed class JpegSaving : ISaving
     {
         public void Save(Screenshot screenshot, ImagePath path)
         {
