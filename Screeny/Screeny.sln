@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screeny", "Screeny\Screeny.csproj", "{44B86FD6-EE6C-469A-B700-B8AC4F53DE5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Screeny", "Screeny\Screeny.csproj", "{44B86FD6-EE6C-469A-B700-B8AC4F53DE5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screeny.Domain", "Screeny.Domain\Screeny.Domain.csproj", "{C2569339-91DB-4045-A56A-EDC972FC760D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Screeny.Domain", "Screeny.Domain\Screeny.Domain.csproj", "{C2569339-91DB-4045-A56A-EDC972FC760D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screeny.Application", "Screeny.Application\Screeny.Application.csproj", "{E341EABA-6C02-44B0-8B3E-69ED8AAA2D9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Screeny.Application", "Screeny.Application\Screeny.Application.csproj", "{E341EABA-6C02-44B0-8B3E-69ED8AAA2D9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
