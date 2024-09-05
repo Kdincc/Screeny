@@ -5,6 +5,7 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	<RootNamespace>Screeny</RootNamespace>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
