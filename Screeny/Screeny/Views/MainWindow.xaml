@@ -6,15 +6,8 @@
         xmlns:local="clr-namespace:Screeny"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen"
-        WindowStyle="None"
-        AllowsTransparency="True"
-        Background="Transparent">
+        WindowStartupLocation="CenterScreen">
+    <Grid>
 
-    <Border CornerRadius="10">
-        <Grid Background="{StaticResource PrimaryGradient}" >
-
-        </Grid>
-    </Border>
-
+    </Grid>
 </Window>
