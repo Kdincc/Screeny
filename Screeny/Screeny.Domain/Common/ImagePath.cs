@@ -2,25 +2,25 @@
 
 namespace Screeny.Domain.Common
 {
-    public readonly struct Path
+    public readonly struct ImagePath
     {
         private readonly string _path;
 
-        private Path(string path)
+        private ImagePath(string path)
         {
             _path = path;
         }
 
         public string Value => _path;
 
-        public static Path Create(string path)
+        public static ImagePath Create(string path)
         {
             ThrowIfContainsInvalidChars(path);
             ThrowIfIsNullOrWhitespace(path);
             ThrowIfPathIsTooLong(path);
             ThrowIfPathIsNotRooted(path);
 
-            return new Path(path);
+            return new ImagePath(path);
         }
 
         private static void ThrowIfIsNullOrWhitespace(string path)
@@ -57,8 +57,8 @@ namespace Screeny.Domain.Common
             }
         }
 
-        public static implicit operator string(Path path) => path.Value;
+        public static implicit operator string(ImagePath path) => path.Value;
 
-        public static implicit operator Path(string path) => Create(path);
+        public static implicit operator ImagePath(string path) => Create(path);
     }
 }

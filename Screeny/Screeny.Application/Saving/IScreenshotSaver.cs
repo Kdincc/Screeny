@@ -11,8 +11,8 @@ namespace Screeny.Application.Saving
 {
     public interface IScreenshotSaver
     {
-        public SavingResult Save(Screenshot screenshot, Path path);
+        public SavingResult Save(Screenshot screenshot, ImagePath path);
 
-        public SavingResult Save(ScreenshotSession screenshotStack, Path path);
+        public SavingResult Save(ScreenshotSession screenshotStack, ImagePath path);
     }
 }

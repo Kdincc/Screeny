@@ -15,7 +15,7 @@ namespace Screeny.Application.ScreenshotSessions
 
         public void RemoveSession(ScreenshotSession session);
 
-        public void SaveSession(ScreenshotSession session, Path path);
+        public void SaveSession(ScreenshotSession session, ImagePath path);
 
         public void AddScreenshotToSession(ScreenshotSession session, Screenshot screenshot);
     }

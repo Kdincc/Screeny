@@ -13,7 +13,7 @@ namespace Screeny.Application.Saving.SavingStrategies
 {
     public sealed class JpegSavingStrategy : ISavingStrategy
     {
-        public void Save(Screenshot screenshot, Domain.Common.Path path)
+        public void Save(Screenshot screenshot, ImagePath path)
         {
             using MemoryStream memoryStream = new([.. screenshot.Image.ImageData]);
             using Image image = Image.FromStream(memoryStream);

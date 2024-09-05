@@ -33,7 +33,7 @@ namespace Screeny.Application.ScreenshotSessions
             _sessions.Remove(session);
         }
 
-        public void SaveSession(ScreenshotSession session, Path path)
+        public void SaveSession(ScreenshotSession session, ImagePath path)
         {
             _saver.Save(session, path);
 

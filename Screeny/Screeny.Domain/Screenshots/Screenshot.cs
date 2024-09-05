@@ -33,7 +33,7 @@ namespace Screeny.Domain.Screenshots
             Format = newFormat;
         }
 
-        public void Save(ISavingStrategy savingStrategy, Path path)
+        public void Save(ISavingStrategy savingStrategy, ImagePath path)
         {
             savingStrategy.Save(this, path);
         }

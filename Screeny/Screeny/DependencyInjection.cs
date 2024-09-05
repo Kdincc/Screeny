@@ -11,10 +11,10 @@ namespace Screeny
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddScreeny(this IServiceCollection services, ResourceDictionary resources)
+        public static IServiceCollection AddScreeny(this IServiceCollection services, ResourceDictionary appResources)
         {
             services.AddWpfBlazorWebView();
-            resources.Add("services", services.BuildServiceProvider());
+            appResources.Add("services", services.BuildServiceProvider());
 
             return services;
         }

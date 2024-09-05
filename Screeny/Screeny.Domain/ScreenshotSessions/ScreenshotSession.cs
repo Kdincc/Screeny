@@ -40,7 +40,7 @@ namespace Screeny.Domain.ScreenshotStacks
             _screenshots.Clear();
         }
 
-        public void SaveAll(ISavingStrategy savingStrategy, Path path)
+        public void SaveAll(ISavingStrategy savingStrategy, ImagePath path)
         {
             _screenshots.ForEach(screenshot => screenshot.Save(savingStrategy, path));
         }
